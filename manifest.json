@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Ad Skipper",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"], 
+      "js": ["contentScript.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/ext-icon.png",
+      "48": "assets/ext-icon.png",
+      "128": "assets/ext-icon.png"
+    }
+  }
+}
