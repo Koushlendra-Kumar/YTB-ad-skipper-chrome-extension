@@ -1,6 +1,5 @@
 function clickSkipButton() {
-    const skipButton = document.getElementsByClassName('ytp-ad-skip-button');
-    console.log(skipButton);
+    const skipButton = document.getElementsByClassName(".ytp-ad-skip-button-modern")
     if(skipButton.length > 0) {
         skipButton[0].click();
         console.log('clicked');
@@ -9,4 +8,4 @@ function clickSkipButton() {
 
 clickSkipButton();
 
-setInterval(clickSkipButton, 5000);
+setInterval(clickSkipButton, 1000);
