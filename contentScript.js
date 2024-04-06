@@ -1,17 +1,15 @@
 function clickSkipButton() {
-    const skipButton = document.getElementsByClassName('ytp-ad-skip-button-modern')
-    if(skipButton.length > 0) {
+    [
+      "ytp-ad-skip-button-modern",
+      "ytp-ad-skip-button",
+      "ytp-skip-ad-button",
+    ].forEach((cls) => {
+      const skipButton = document.getElementsByClassName(cls);
+      if (skipButton.length > 0) {
         skipButton[0].click();
-        console.log('clicked');
-    }
-    const oldSkipButton = document.getElementsByClassName('ytp-ad-skip-button');
-    
-    if(oldSkipButton.length > 0) {
-        oldSkipButton[0].click();
-        console.log('clicked');
-    }
+        console.log("clicked", cls);
+      }
+    });
 }
-
-clickSkipButton();
 
 setInterval(clickSkipButton, 1000);
