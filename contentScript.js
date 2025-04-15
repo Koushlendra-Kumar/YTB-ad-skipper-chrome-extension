@@ -3,7 +3,6 @@ function clickSkipButton() {
     "ytp-ad-skip-button-modern",
     "ytp-ad-skip-button",
     "ytp-skip-ad-button",
-    "ytp-ad-component--clickable",
   ].forEach((cls) => {
     const skipButton = document.getElementsByClassName(cls);
     if (skipButton.length > 0) {
