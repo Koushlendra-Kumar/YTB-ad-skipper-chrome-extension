@@ -22,14 +22,30 @@ function hideFeedAdd() {
 
 function hideYoutubeShorts() {
   const shorts = document.querySelectorAll("ytd-reel-shelf-renderer");
-  
+  const homePageShorts = document.querySelectorAll("ytd-rich-section-renderer");
+  homePageShorts.forEach((short) => {
+    console.log("hiding home shorts");
+    short.style.display = "none";
+  });
   shorts.forEach((short) => {
     console.log("hiding shorts");
     short.style.display = "none";
   });
 }
 
-setInterval(hideFeedAdd, 2000);
-setInterval(hideYoutubeShorts, 2000);
+function hideYoutubeShortsEntryButton() {
+  const shortsEntry = document.querySelectorAll(
+    ".ytd-guide-entry-renderer[title='Shorts']"
+  );
+  console.log(shortsEntry, shortsEntry.length);
+  if (shortsEntry.length > 0) {
+    shortsEntry.forEach((entry) => (entry.style.display = "none"));
+  }
+}
 
-setInterval(clickSkipButton, 1000);
+setInterval(() => {
+  hideFeedAdd();
+  hideYoutubeShortsEntryButton();
+  hideYoutubeShorts();
+  clickSkipButton();
+}, 1000);
