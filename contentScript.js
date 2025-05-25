@@ -35,7 +35,7 @@ function hideYoutubeShorts() {
 
 function hideYoutubeShortsEntryButton() {
   const shortsEntry = document.querySelectorAll(
-    ".ytd-guide-entry-renderer[title='Shorts']"
+    "#endpoint[title='Shorts']"
   );
   console.log(shortsEntry, shortsEntry.length);
   if (shortsEntry.length > 0) {
